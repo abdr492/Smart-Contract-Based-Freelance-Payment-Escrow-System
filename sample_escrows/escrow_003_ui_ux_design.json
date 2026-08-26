@@ -1,0 +1,29 @@
+{
+  "escrowId": 3,
+  "title": "Mobile Crypto Wallet UI/UX Design System",
+  "category": "UI/UX Design",
+  "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+  "clientName": "TechCorp Global Solutions",
+  "freelancer": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+  "freelancerName": "Alice Rivera, Lead Web3 Dev",
+  "arbitrator": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "arbitratorName": "Kleros Decentralized Guild",
+  "totalAmountEth": 0.8,
+  "status": "COMPLETED",
+  "milestones": [
+    {
+      "milestoneId": 1,
+      "description": "Wireframe Prototypes & User Journey Maps",
+      "amountEth": 0.4,
+      "status": "RELEASED",
+      "deliverableUri": "ipfs://QmB2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3"
+    },
+    {
+      "milestoneId": 2,
+      "description": "Figma Component Design Tokens & Dark Mode Theme",
+      "amountEth": 0.4,
+      "status": "RELEASED",
+      "deliverableUri": "ipfs://QmC3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "escrowId": 1,
+  "title": "Full-Stack Web3 DApp Frontend & Smart Contract Integration",
+  "category": "Web3 Development",
+  "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+  "clientName": "TechCorp Global Solutions",
+  "freelancer": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+  "freelancerName": "Alice Rivera, Lead Web3 Dev",
+  "arbitrator": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "arbitratorName": "Kleros Decentralized Guild",
+  "totalAmountEth": 1.5,
+  "status": "IN_PROGRESS",
+  "milestones": [
+    {
+      "milestoneId": 1,
+      "description": "UI Components & Signal State Architecture Setup",
+      "amountEth": 0.5,
+      "status": "RELEASED",
+      "deliverableUri": "ipfs://QmX7y9Z2aB4c3d2e1f0a9b8c7d6e5f4a3b2c1d0e9f8a7b6"
+    },
+    {
+      "milestoneId": 2,
+      "description": "MetaMask Web3 Ethers v6 Integration & ABI Binding",
+      "amountEth": 0.5,
+      "status": "SUBMITTED",
+      "deliverableUri": "ipfs://QmY8z1aB5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a8b7c6"
+    },
+    {
+      "milestoneId": 3,
+      "description": "D3 Telemetry Charts & End-to-End Test Suite",
+      "amountEth": 0.5,
+      "status": "FUNDED",
+      "deliverableUri": ""
+    }
+  ]
+}
