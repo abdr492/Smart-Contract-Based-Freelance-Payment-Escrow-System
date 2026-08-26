@@ -19,14 +19,14 @@ import { TrustScoreTrendComponent } from './trust-score-trend';
         <div>
           <div class="flex items-center gap-2">
             <h2 class="text-xl font-bold text-white tracking-tight">
-              {{ i18n.t('navReputation') }} & Soulbound Proofs
+              {{ i18n.t('navReputation') }} & Verified Badges
             </h2>
             <span class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
-              ERC-5192 SBT System
+              Verified Badges
             </span>
           </div>
           <p class="text-xs sm:text-sm text-slate-400 mt-1 max-w-2xl">
-            Non-transferable on-chain proof of work, multi-sig reliability ratings, and cryptographic peer reviews for long-term client-freelancer trust.
+            Permanent proof of completed work, reliability ratings, and peer reviews for long-term client-freelancer trust.
           </p>
         </div>
 

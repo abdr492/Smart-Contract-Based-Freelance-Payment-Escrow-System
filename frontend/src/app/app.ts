@@ -10,6 +10,7 @@ import { ReputationViewComponent } from './components/reputation/reputation-view
 import { MessagesViewComponent } from './components/messages/messages-view';
 import { AnalyticsViewComponent } from './components/analytics/analytics-view';
 import { ModalsComponent } from './components/modals/modals';
+import { LoadingScreenComponent } from './components/loading-screen/loading-screen';
 import { EscrowStateService } from './services/escrow-state.service';
 import { I18nService } from './services/i18n.service';
 import { Web3SimulationService } from './services/web3-simulation.service';
@@ -20,6 +21,7 @@ import { Web3SimulationService } from './services/web3-simulation.service';
   imports: [
     CommonModule,
     MatIconModule,
+    LoadingScreenComponent,
     HeaderComponent,
     DashboardComponent,
     ContractsViewComponent,

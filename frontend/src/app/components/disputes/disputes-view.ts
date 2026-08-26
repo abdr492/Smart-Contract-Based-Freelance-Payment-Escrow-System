@@ -21,11 +21,11 @@ import { DisputeCase } from '../../models/escrow.models';
               {{ i18n.t('navDisputes') }}
             </h2>
             <span class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-red-500/10 text-red-400 border border-red-500/30">
-              Decentralized Arbitration Court
+              Mediation & Resolution Center
             </span>
           </div>
           <p class="text-xs sm:text-sm text-slate-400 mt-1 max-w-2xl">
-            Neutral third-party and multi-sig mediation for contested deliverables, scope disputes, and on-chain fund splits.
+            Neutral mediation and shared-decision review for contested deliverables, project scope questions, and payment splits.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ import { DisputeCase } from '../../models/escrow.models';
         <!-- Disputes List (Left 1 Col) -->
         <div class="space-y-3">
           <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">
-            Arbitration Cases ({{ state.disputes().length }})
+            Mediation Cases ({{ state.disputes().length }})
           </h3>
 
           <div class="space-y-2">

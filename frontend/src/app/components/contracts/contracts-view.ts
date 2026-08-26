@@ -205,7 +205,7 @@ import { EscrowContract, Milestone } from '../../models/escrow.models';
                   </div>
                 </div>
                 <span class="px-2 py-0.5 text-[10px] font-mono font-bold rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">
-                  Arbiter (Quorum 2/3)
+                  Mediator (2 of 3 Approvals)
                 </span>
               </div>
 
@@ -217,7 +217,7 @@ import { EscrowContract, Milestone } from '../../models/escrow.models';
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-2">
                 <mat-icon class="text-emerald-400 text-lg">timeline</mat-icon>
-                <h3 class="text-base font-bold text-white">Project Milestones & Escrow Stages</h3>
+                <h3 class="text-base font-bold text-white">Project Milestones & Payment Stages</h3>
               </div>
               <span class="text-xs text-slate-400 font-mono">
                 {{ current.milestones.length }} Total Milestones

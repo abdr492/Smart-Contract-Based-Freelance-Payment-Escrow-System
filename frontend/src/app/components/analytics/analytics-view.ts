@@ -18,14 +18,14 @@ import { AnalyticsExportService } from '../../services/analytics-export.service'
         <div>
           <div class="flex items-center gap-2">
             <h2 class="text-xl font-bold text-white tracking-tight">
-              {{ i18n.t('navAnalytics') }} & Audit Trail
+              {{ i18n.t('navAnalytics') }} & Payment History
             </h2>
             <span class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/30">
-              Immutable Accounting
+              Verified Records
             </span>
           </div>
           <p class="text-xs sm:text-sm text-slate-400 mt-1 max-w-2xl">
-            Real-time gas expenditure metrics, escrow liquidity breakdown, and cryptographic transaction audit logs.
+            Real-time fee savings metrics, protected funds breakdown, and official transaction receipt logs.
           </p>
         </div>
 

@@ -38,12 +38,12 @@ import { I18nService } from '../../services/i18n.service';
             <mat-icon class="text-sm" style="font-size: 16px; width: 16px; height: 16px;">
               {{ copied() ? 'check' : 'content_copy' }}
             </mat-icon>
-            <span>{{ copied() ? 'Copied Source!' : 'Copy Solidity' }}</span>
+            <span>{{ copied() ? 'Copied Source!' : 'Copy Code' }}</span>
           </button>
         </div>
       </div>
 
-      <!-- Main Tabs: Solidity Source Code vs Interactive ABI Playground -->
+      <!-- Main Tabs: Agreement Rules vs Interactive Functions vs Data Storage -->
       <div class="flex items-center space-x-2 border-b border-slate-800 pb-2">
         <button
           type="button"
@@ -56,7 +56,7 @@ import { I18nService } from '../../services/i18n.service';
           [class.text-slate-400]="activeSubTab() !== 'source'"
         >
           <mat-icon class="text-sm" style="font-size: 16px; width: 16px; height: 16px;">integration_instructions</mat-icon>
-          <span>Solidity Source Code (.sol)</span>
+          <span>Agreement Rules & Logic</span>
         </button>
 
         <button
@@ -70,7 +70,7 @@ import { I18nService } from '../../services/i18n.service';
           [class.text-slate-400]="activeSubTab() !== 'abi'"
         >
           <mat-icon class="text-sm" style="font-size: 16px; width: 16px; height: 16px;">terminal</mat-icon>
-          <span>Interactive ABI Playground & Caller</span>
+          <span>Interactive Function Console</span>
         </button>
 
         <button
@@ -84,7 +84,7 @@ import { I18nService } from '../../services/i18n.service';
           [class.text-slate-400]="activeSubTab() !== 'state'"
         >
           <mat-icon class="text-sm" style="font-size: 16px; width: 16px; height: 16px;">memory</mat-icon>
-          <span>EVM Storage Slot Inspector</span>
+          <span>Live Data Storage Inspector</span>
         </button>
       </div>
 

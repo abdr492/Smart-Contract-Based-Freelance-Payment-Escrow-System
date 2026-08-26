@@ -26,7 +26,7 @@ import { NetworkType, UserRole } from '../../models/escrow.models';
               <div class="flex items-center gap-2">
                 <span class="font-bold tracking-tight text-white text-base sm:text-lg">EtherTrust</span>
                 <span class="px-2 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
-                  Multi-Sig Escrow
+                  Protected Escrow
                 </span>
               </div>
               <p class="hidden sm:block text-[11px] text-slate-400 font-medium">
