@@ -1,0 +1,6 @@
+{
+  "name": "Smart Contract Freelance Escrow",
+  "description": "A decentralized Ethereum smart contract freelance payment escrow system featuring multi-sig authorization, milestone management, dispute arbitration, reputation tracking, and encrypted collaboration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

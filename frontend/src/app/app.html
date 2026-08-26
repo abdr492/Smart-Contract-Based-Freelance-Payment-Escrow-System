@@ -1,0 +1,228 @@
+<div class="min-h-screen bg-slate-950 text-slate-100 flex flex-col selection:bg-emerald-500 selection:text-slate-950">
+  
+  <!-- Top Navigation Header Component -->
+  <app-header />
+
+  <!-- Navigation Tabs Strip (Desktop & Tablet) -->
+  <div class="border-b border-slate-800/80 bg-slate-900/60 sticky top-16 z-30 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex space-x-1 overflow-x-auto py-2 scrollbar-none">
+        
+        <!-- Tab 1: Dashboard -->
+        <button
+          type="button"
+          (click)="state.setActiveTab('dashboard')"
+          class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold transition shrink-0"
+          [class.bg-emerald-500/10]="state.activeTab() === 'dashboard'"
+          [class.text-emerald-400]="state.activeTab() === 'dashboard'"
+          [class.border]="state.activeTab() === 'dashboard'"
+          [class.border-emerald-500/30]="state.activeTab() === 'dashboard'"
+          [class.text-slate-400]="state.activeTab() !== 'dashboard'"
+          [class.hover:text-slate-200]="state.activeTab() !== 'dashboard'"
+        >
+          <mat-icon class="text-sm" style="font-size: 16px; width: 16px; height: 16px;">dashboard</mat-icon>
+          <span>{{ i18n.t('navDashboard') }}</span>
+        </button>
+
+        <!-- Tab 2: Contracts & Milestones -->
+        <button
+          type="button"
+          (click)="state.setActiveTab('contracts')"
+          class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold transition shrink-0"
+          [class.bg-emerald-500/10]="state.activeTab() === 'contracts'"
+          [class.text-emerald-400]="state.activeTab() === 'contracts'"
+          [class.border]="state.activeTab() === 'contracts'"
+          [class.border-emerald-500/30]="state.activeTab() === 'contracts'"
+          [class.text-slate-400]="state.activeTab() !== 'contracts'"
+          [class.hover:text-slate-200]="state.activeTab() !== 'contracts'"
+        >
+          <mat-icon class="text-sm" style="font-size: 16px; width: 16px; height: 16px;">account_balance_wallet</mat-icon>
+          <span>{{ i18n.t('navContracts') }}</span>
+          <span class="px-1.5 py-0.2 rounded-full text-[10px] font-mono bg-slate-800 text-slate-300">
+            {{ state.contracts().length }}
+          </span>
+        </button>
+
+        <!-- Tab 3: Solidity Code & ABI -->
+        <button
+          type="button"
+          (click)="state.setActiveTab('solidity')"
+          class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold transition shrink-0"
+          [class.bg-emerald-500/10]="state.activeTab() === 'solidity'"
+          [class.text-emerald-400]="state.activeTab() === 'solidity'"
+          [class.border]="state.activeTab() === 'solidity'"
+          [class.border-emerald-500/30]="state.activeTab() === 'solidity'"
+          [class.text-slate-400]="state.activeTab() !== 'solidity'"
+          [class.hover:text-slate-200]="state.activeTab() !== 'solidity'"
+        >
+          <mat-icon class="text-sm" style="font-size: 16px; width: 16px; height: 16px;">integration_instructions</mat-icon>
+          <span>{{ i18n.t('navSolidity') }}</span>
+        </button>
+
+        <!-- Tab 4: Dispute Resolution -->
+        <button
+          type="button"
+          (click)="state.setActiveTab('disputes')"
+          class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold transition shrink-0"
+          [class.bg-red-500/10]="state.activeTab() === 'disputes'"
+          [class.text-red-400]="state.activeTab() === 'disputes'"
+          [class.border]="state.activeTab() === 'disputes'"
+          [class.border-red-500/30]="state.activeTab() === 'disputes'"
+          [class.text-slate-400]="state.activeTab() !== 'disputes'"
+          [class.hover:text-slate-200]="state.activeTab() !== 'disputes'"
+        >
+          <mat-icon class="text-sm" style="font-size: 16px; width: 16px; height: 16px;">gavel</mat-icon>
+          <span>{{ i18n.t('navDisputes') }}</span>
+          @if (state.activeDisputesCount() > 0) {
+            <span class="px-1.5 py-0.2 rounded-full text-[10px] font-mono bg-red-500/20 text-red-300">
+              {{ state.activeDisputesCount() }}
+            </span>
+          }
+        </button>
+
+        <!-- Tab 5: Reputation & Soulbound Badges -->
+        <button
+          type="button"
+          (click)="state.setActiveTab('reputation')"
+          class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold transition shrink-0"
+          [class.bg-emerald-500/10]="state.activeTab() === 'reputation'"
+          [class.text-emerald-400]="state.activeTab() === 'reputation'"
+          [class.border]="state.activeTab() === 'reputation'"
+          [class.border-emerald-500/30]="state.activeTab() === 'reputation'"
+          [class.text-slate-400]="state.activeTab() !== 'reputation'"
+          [class.hover:text-slate-200]="state.activeTab() !== 'reputation'"
+        >
+          <mat-icon class="text-sm" style="font-size: 16px; width: 16px; height: 16px;">verified</mat-icon>
+          <span>{{ i18n.t('navReputation') }}</span>
+        </button>
+
+        <!-- Tab 6: Encrypted Messages & Scheduling -->
+        <button
+          type="button"
+          (click)="state.setActiveTab('messages')"
+          class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold transition shrink-0"
+          [class.bg-emerald-500/10]="state.activeTab() === 'messages'"
+          [class.text-emerald-400]="state.activeTab() === 'messages'"
+          [class.border]="state.activeTab() === 'messages'"
+          [class.border-emerald-500/30]="state.activeTab() === 'messages'"
+          [class.text-slate-400]="state.activeTab() !== 'messages'"
+          [class.hover:text-slate-200]="state.activeTab() !== 'messages'"
+        >
+          <mat-icon class="text-sm" style="font-size: 16px; width: 16px; height: 16px;">forum</mat-icon>
+          <span>{{ i18n.t('navMessages') }}</span>
+        </button>
+
+        <!-- Tab 7: Analytics & Audit Logs -->
+        <button
+          type="button"
+          (click)="state.setActiveTab('analytics')"
+          class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold transition shrink-0"
+          [class.bg-emerald-500/10]="state.activeTab() === 'analytics'"
+          [class.text-emerald-400]="state.activeTab() === 'analytics'"
+          [class.border]="state.activeTab() === 'analytics'"
+          [class.border-emerald-500/30]="state.activeTab() === 'analytics'"
+          [class.text-slate-400]="state.activeTab() !== 'analytics'"
+          [class.hover:text-slate-200]="state.activeTab() !== 'analytics'"
+        >
+          <mat-icon class="text-sm" style="font-size: 16px; width: 16px; height: 16px;">query_stats</mat-icon>
+          <span>{{ i18n.t('navAnalytics') }}</span>
+        </button>
+
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main Content Container -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 pb-20 sm:pb-8">
+    @switch (state.activeTab()) {
+      @case ('dashboard') {
+        <app-dashboard />
+      }
+      @case ('contracts') {
+        <app-contracts-view />
+      }
+      @case ('solidity') {
+        <app-solidity-view />
+      }
+      @case ('disputes') {
+        <app-disputes-view />
+      }
+      @case ('reputation') {
+        <app-reputation-view />
+      }
+      @case ('messages') {
+        <app-messages-view />
+      }
+      @case ('analytics') {
+        <app-analytics-view />
+      }
+    }
+  </main>
+
+  <!-- Modals & Overlays Container -->
+  <app-modals />
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-900/95 border-t border-slate-800 backdrop-blur-lg flex items-center justify-around py-2 px-1">
+    
+    <button
+      type="button"
+      (click)="state.setActiveTab('dashboard')"
+      class="flex flex-col items-center gap-0.5 p-1 text-[10px]"
+      [class.text-emerald-400]="state.activeTab() === 'dashboard'"
+      [class.text-slate-400]="state.activeTab() !== 'dashboard'"
+    >
+      <mat-icon style="font-size: 20px; width: 20px; height: 20px;">dashboard</mat-icon>
+      <span>Home</span>
+    </button>
+
+    <button
+      type="button"
+      (click)="state.setActiveTab('contracts')"
+      class="flex flex-col items-center gap-0.5 p-1 text-[10px]"
+      [class.text-emerald-400]="state.activeTab() === 'contracts'"
+      [class.text-slate-400]="state.activeTab() !== 'contracts'"
+    >
+      <mat-icon style="font-size: 20px; width: 20px; height: 20px;">account_balance_wallet</mat-icon>
+      <span>Escrow</span>
+    </button>
+
+    <button
+      type="button"
+      (click)="state.setActiveTab('disputes')"
+      class="flex flex-col items-center gap-0.5 p-1 text-[10px] relative"
+      [class.text-red-400]="state.activeTab() === 'disputes'"
+      [class.text-slate-400]="state.activeTab() !== 'disputes'"
+    >
+      <mat-icon style="font-size: 20px; width: 20px; height: 20px;">gavel</mat-icon>
+      <span>Disputes</span>
+      @if (state.activeDisputesCount() > 0) {
+        <span class="absolute top-0 right-1 w-2 h-2 rounded-full bg-red-500"></span>
+      }
+    </button>
+
+    <button
+      type="button"
+      (click)="state.setActiveTab('messages')"
+      class="flex flex-col items-center gap-0.5 p-1 text-[10px]"
+      [class.text-emerald-400]="state.activeTab() === 'messages'"
+      [class.text-slate-400]="state.activeTab() !== 'messages'"
+    >
+      <mat-icon style="font-size: 20px; width: 20px; height: 20px;">forum</mat-icon>
+      <span>Chat</span>
+    </button>
+
+    <button
+      type="button"
+      (click)="state.setActiveTab('analytics')"
+      class="flex flex-col items-center gap-0.5 p-1 text-[10px]"
+      [class.text-emerald-400]="state.activeTab() === 'analytics'"
+      [class.text-slate-400]="state.activeTab() !== 'analytics'"
+    >
+      <mat-icon style="font-size: 20px; width: 20px; height: 20px;">query_stats</mat-icon>
+      <span>Audit</span>
+    </button>
+
+  </div>
+
+</div>
